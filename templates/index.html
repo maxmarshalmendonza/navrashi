@@ -1,0 +1,598 @@
+<!-- Main HTML Document for Rashi Singh's Yoga Portfolio Website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rashi Singh | Yoga Instructor</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ TailwindCSS v3 via CDN (JIT enabled) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A', // change to match Kamya's blue
+          }
+        }
+      }
+    }
+  </script>  
+
+  <!-- Tiny Slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    .testimonial-slide img {
+      border-radius: 9999px;
+      width: 60px;
+      height: 60px;
+    }
+
+    .decor-bg {
+      background-image: url('static/images/lotus-bg.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    @media (max-width: 640px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      nav button {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    .floating-svg {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+      z-index: 0;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    .blob-bg {
+      background: radial-gradient(circle at 30% 30%, #f3e8ff, #e0f2fe, transparent 80%);
+    }
+
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .hover-bounce:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .tick-card::before {
+      content: '✔️ ';
+      color: green;
+      margin-right: 4px;
+    }
+
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .animate-spin-slow {
+      animation: spin-slow 3s linear infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Brand Name -->
+      <div class="text-2xl font-bold text-[#5D3A00]">NavRashi</div>
+  
+      <!-- Buttons -->
+      <div class="space-x-3 hidden md:flex">
+        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
+          1-on-1
+        </button>
+        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
+          Group
+        </button>
+        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
+          Meditation
+        </button>
+        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
+          Doubts/Queries
+        </button>
+      </div>
+    </div>
+  </header>
+  
+
+ <!-- HERO SECTION: Photo, Name, Title -->
+ <section class="bg-[#FFF5EF] pt-12 pb-16 relative overflow-hidden">
+  <div class="container mx-auto px-6">
+    <div class="bg-[#FFE3D5] rounded-3xl shadow-xl px-8 py-12 flex flex-col-reverse lg:flex-row items-center justify-between">
+      
+      <!-- LEFT SIDE: Text + Buttons + Community -->
+      <div class="lg:w-1/2 w-full text-left space-y-6">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-[#6B4C24] leading-tight text-center sm:text-left mt-4 sm:mt-0">
+          Welcome to NavRashi by Rashi Singh
+        </h1>
+        <p class="text-[#6B4C24] text-lg max-w-md">
+          Prioritize yourself and join our yoga classes.
+        </p>
+
+        <!-- Buttons -->
+<div class="mt-6 flex flex-wrap gap-3 justify-center sm:justify-start">
+  <button onclick="scrollToSection('classes')"
+          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
+    1 on 1 Classes
+  </button>
+  <button onclick="scrollToSection('classes')"
+          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
+    Group Classes
+  </button>
+  <button onclick="scrollToSection('classes')"
+          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
+    Meditation Classes
+  </button>
+  <button onclick="scrollToSection('classes')"
+          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
+    Doubts/Queries
+  </button>
+</div>
+
+        <!-- COMMUNITY PREVIEW -->
+        <div class="mt-8 flex items-center space-x-4">
+          <div class="flex -space-x-3">
+            <img src="{{ url_for('static', filename='images/face1.svg.svg') }}"
+                 class="w-9 h-9 rounded-full border-2 border-white shadow" alt="User 1">
+            <img src="{{ url_for('static', filename='images/face4.svg.svg') }}"
+                 class="w-9 h-9 rounded-full border-2 border-white shadow" alt="User 2">
+            <img src="{{ url_for('static', filename='images/face6.svg.svg') }}"
+                 class="w-9 h-9 rounded-full border-2 border-white shadow" alt="User 3">
+          </div>
+          <div class="h-px w-8 bg-gray-300"></div>
+          <p class="text-sm text-[#6B4C24]">5000+ lives touched</p>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE: Hero Image -->
+      <div class="lg:w-1/2 w-full flex justify-center lg:justify-end items-start mt-8 lg:mt-0">
+        <div class="relative w-64 h-64 rounded-full p-[6px] bg-gradient-to-tr from-[#FFB68F] to-[#FFD6A5] shadow-2xl">
+          <div class="absolute -inset-6 rounded-full bg-[#FFEDD5] opacity-30 blur-2xl z-0"></div>
+          <div class="relative w-full h-full rounded-full border-[5px] border-[#FAD4C0] bg-[#FFF0E5] overflow-hidden z-10 shadow-lg">
+            <img src="{{ url_for('static', filename='images/rashimain.png.png') }}"
+                 alt="Rashi Singh"
+                 class="w-full h-full object-cover object-[center_60%]" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- COUNTER -->
+  <section class="bg-[#FFF4EC] py-12">
+    <div class="container mx-auto px-6 md:px-16">
+      <div class="bg-white rounded-2xl shadow-md py-8 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+  
+        <!-- POINT 1 -->
+        <div class="flex items-center gap-4">
+          <img src="{{ url_for('static', filename='images/certificate.svg.svg') }}" alt="Certified" class="w-10 h-10">
+          <div>
+            <p class="text-lg font-semibold text-[#5D3A00]">Certified Trainer</p>
+            <p class="text-sm text-[#6B4C24]">Internationally recognized</p>
+          </div>
+        </div>
+  
+        <!-- POINT 2 -->
+        <div class="flex items-center gap-4">
+          <img src="{{ url_for('static', filename='images/meditation.svg.svg') }}" alt="Experience" class="w-10 h-10">
+          <div>
+            <p class="text-lg font-semibold text-[#5D3A00]">Trusted by working professionals</p>
+            <p class="text-sm text-[#6B4C24]">& homemakers alike</p>
+          </div>
+        </div>
+  
+        <!-- POINT 3 -->
+        <div class="flex items-center gap-4">
+          <img src="{{ url_for('static', filename='images/livestouched.svg.svg') }}" alt="Clients" class="w-10 h-10">
+          <div>
+            <p class="text-lg font-semibold text-[#5D3A00]">5000+ Lives Touched</p>
+            <p class="text-sm text-[#6B4C24]">Across India</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+
+  <!-- ABOUT -->
+  <section class="bg-[#FFF4EC] py-20">
+    <div class="container mx-auto px-6 md:px-16">
+  
+      <!-- CARD WRAPPER -->
+      <div class="bg-white rounded-3xl shadow-xl px-6 md:px-12 py-12 flex flex-col md:flex-row items-center gap-12 border border-[#FAD8B0]">
+  
+        <!-- IMAGE -->
+        <div class="flex-1 flex justify-center">
+          <div class="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <img src="{{ url_for('static', filename='images/gallary.jpg.jpg') }}"
+                 alt="Rashi About"
+                 class="w-full h-full object-cover object-[center_30%]">
+          </div>
+        </div>
+  
+        <!-- TEXT -->
+        <div class="flex-1">
+          <h2 class="text-3xl font-bold text-[#5D3A00] mb-4">About Rashi</h2>
+          <p class="text-lg text-[#6B4C24] leading-relaxed">
+            Hi, I'm <strong>Rashi Singh</strong> — a certified yoga trainer dedicated to guiding others on a journey of inner peace, strength, and self-discovery. Over the years, I’ve had the blessing of helping 5,000+ individuals reconnect with themselves—physically, mentally, and spiritually.
+            Yoga, for me, is more than a practice—it’s a way of life. Through my carefully designed online sessions, I aim to make this ancient wisdom accessible to all, no matter where you are or what your schedule looks like.
+          </p>
+          <p class="mt-4 text-[#6B4C24] leading-relaxed">
+            Every class is crafted with intention, blending breath, movement, and mindfulness to create space—not just in the body, but in the soul. Whether you're a beginner or returning to the mat, I invite you to walk this path with me—toward balance, healing, and a deeper sense of self.
+          </p>
+        </div>
+  
+      </div>
+      
+    </div>
+  </section>  
+
+  <section class="bg-white py-20">
+    <div class="container mx-auto px-6 md:px-16">
+      <h2 class="text-3xl font-bold text-[#5D3A00] text-center mb-12">Why Join Rashi's Yoga Classes?</h2>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+  
+        <!-- CARD 1 -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300 text-center">
+          <div class="w-16 h-16 bg-[#FDE3D9] rounded-full mx-auto flex items-center justify-center mb-4">
+            <img src="{{ url_for('static', filename='images/yogaa1.svg.svg') }}" alt="Flexibility" class="w-8 h-8">
+          </div>
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-2">Improve Flexibility</h3>
+          <p class="text-sm text-[#6B4C24]">Increase mobility & correct posture naturally.</p>
+        </div>
+  
+        <!-- CARD 2 -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300 text-center">
+          <div class="w-16 h-16 bg-[#D9F3F0] rounded-full mx-auto flex items-center justify-center mb-4">
+            <img src="{{ url_for('static', filename='images/stress1.svg.svg') }}" alt="Stress Relief" class="w-8 h-8">
+          </div>
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-2">Relieve Stress</h3>
+          <p class="text-sm text-[#6B4C24]">Feel calm through breath and gentle movement.</p>
+        </div>
+  
+        <!-- CARD 3 -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300 text-center">
+          <div class="w-16 h-16 bg-[#FFE0E6] rounded-full mx-auto flex items-center justify-center mb-4">
+            <img src="{{ url_for('static', filename='images/heartfitness.svg.svg') }}" alt="Immunity Boost" class="w-8 h-8">
+          </div>
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-2">Boost Immunity</h3>
+          <p class="text-sm text-[#6B4C24]">Strengthen your system with holistic yoga.</p>
+        </div>
+  
+        <!-- CARD 4 -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300 text-center">
+          <div class="w-16 h-16 bg-[#E8E2FD] rounded-full mx-auto flex items-center justify-center mb-4">
+            <img src="{{ url_for('static', filename='images/birdpaece.svg.svg') }}" alt="Inner Peace" class="w-8 h-8">
+          </div>
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-2">Find Inner Peace</h3>
+          <p class="text-sm text-[#6B4C24]">Reconnect with your inner calm every day.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- GALLERY
+  <section class="py-16 px-6 bg-white text-center">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-6">Gallery</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="static/images/gallary.jpg.JPG" class="rounded shadow">
+      <img src="static/images/gallaryy.jpg.JPG" class="rounded shadow">
+      <img src="static/images/gallery3.jpg" class="rounded shadow">
+    </div>
+  </section> -->
+
+  <section class="bg-[#FFF4EC] py-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[#5D3A00] mb-12">What People Are Saying</h2>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Testimonial Card 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+          <img src="{{ url_for('static', filename='images/face1.svg.svg') }}" alt="Client 1" class="w-16 h-16 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-1">Anjali Sharma</h3>
+          <p class="text-[#6B4C24] text-sm">"Rashi's yoga sessions brought so much calm and clarity into my life."</p>
+        </div>
+  
+        <!-- Testimonial Card 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+          <img src="{{ url_for('static', filename='images/face2.svg.svg') }}" alt="Client 2" class="w-16 h-16 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-1">Simran Kaur</h3>
+          <p class="text-[#6B4C24] text-sm">"Her 1 on 1 classes have been life-changing. I feel so balanced and present now."</p>
+        </div>
+  
+        <!-- Testimonial Card 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition duration-300">
+          <img src="{{ url_for('static', filename='images/face5.svg.svg') }}" alt="Client 3" class="w-16 h-16 mx-auto rounded-full object-cover mb-4">
+          <h3 class="text-lg font-semibold text-[#5D3A00] mb-1">Rohit Mehra</h3>
+          <p class="text-[#6B4C24] text-sm">“I’ve tried many online programs, but none felt as personal as Rashi’s. Her sessions helped me gain flexibility and a calm mindset I now carry every day.”</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>  
+
+  <!-- SERVICES -->
+  <section id="classes" class="bg-white py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center text-[#5D3A00] mb-12">Explore My Classes</h2>
+  
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Card 1: 1-on-1 Classes -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/oneonone.svg.svg" alt="1-on-1 Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">1-on-1 Classes</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">Personalized sessions to help you grow at your own pace, tailored to your body and goals.</p>
+          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20book%201-on-1%20Yoga%20Classes." target="_blank" class="inline-block mt-auto bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+        </div>
+  
+        <!-- Card 2: Group Classes -->
+        <div class="bg-[#FDF1E3] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/group.svg.svg" alt="Group Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Group Sessions</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">Uplifting community-based yoga sessions that build energy and shared focus.</p>
+          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20join%20Group%20Yoga%20Classes." target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+        </div>
+  
+        <!-- Card 3: Meditation -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/meditation.svg.svg" alt="Meditation Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Meditation</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">Find stillness and clarity with deep guided meditation and breathwork.</p>
+          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20enroll%20for%20Meditation%20Sessions." target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+        </div>
+  
+        <!-- Card 4: Workshops / Others -->
+        <div class="bg-[#FDF1E3] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/brainquestion.svg.svg" alt="Workshop Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Doubts/Queries</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">Select this and talk to me directly about any doubts you have</p>
+          <a href="https://wa.me/917597632099?text=Hey!%20I%20have%20some%20questions%20about%20the%20classes" target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+        </div>
+        
+
+  <section id="faq" class="bg-[#FFF4EC] py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-[#5D3A00] text-center mb-12">Frequently Asked Questions</h2>
+  
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="border border-[#FDCB9E] rounded-xl">
+          <button onclick="toggleFAQ(1)" class="w-full text-left px-6 py-4 flex justify-between items-center">
+            <span class="text-[#5D3A00] font-medium">Do I need any prior experience to join your classes?</span>
+            <svg id="icon-1" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="faq-1" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
+            Not at all! My sessions are beginner-friendly, and I guide each student with personalized attention, making sure everyone feels comfortable and supported.
+          </div>
+        </div>
+  
+        <!-- FAQ 2 -->
+        <div class="border border-[#FDCB9E] rounded-xl">
+          <button onclick="toggleFAQ(2)" class="w-full text-left px-6 py-4 flex justify-between items-center">
+            <span class="text-[#5D3A00] font-medium">Can I book a private session?</span>
+            <svg id="icon-2" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="faq-2" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
+            Yes, I offer private one-on-one sessions both online and in-person. These are great for personalized guidance or working toward specific goals.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-[#FDCB9E] rounded-xl">
+          <button onclick="toggleFAQ(3)" class="w-full text-left px-6 py-4 flex justify-between items-center">
+            <span class="text-[#5D3A00] font-medium">Are all your classes conducted online?</span>
+            <svg id="icon-3" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="faq-3" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
+            Yes, all sessions are 100% online via Whatsapp Video call or Google Meet for group classes. You can practice from the comfort of your home—no commute needed!
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-[#FDCB9E] rounded-xl">
+          <button onclick="toggleFAQ(4)" class="w-full text-left px-6 py-4 flex justify-between items-center">
+            <span class="text-[#5D3A00] font-medium">How do I join an online yoga class?</span>
+            <svg id="icon-4" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="faq-4" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
+            Just click "Book now" on any of the classes you like and it will take you directly to my Whatsapp where we can work it further, and if you have any other doubts or anything, just click the "Other" option and talk to me directly!
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="border border-[#FDCB9E] rounded-xl">
+          <button onclick="toggleFAQ(5)" class="w-full text-left px-6 py-4 flex justify-between items-center">
+            <span class="text-[#5D3A00] font-medium">Are the classes suitable for all age groups?</span>
+            <svg id="icon-5" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </button>
+          <div id="faq-5" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
+            Yes, I offer separate flows for kids, adults, and seniors. All age groups and body types are welcome.
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- JavaScript Section -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script>
+    // Initialize testimonials slider
+    tns({
+      container: '.my-slider',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      controls: false,
+      nav: true,
+      autoplayButtonOutput: false
+    });
+
+    // Scroll to section logic
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Show the booking form modal
+    function showBookingForm(service) {
+      document.getElementById('selectedService').value = service;
+      document.getElementById('formTitle').innerText = Book; {service};
+      document.getElementById('bookingModal').classList.remove('hidden');
+    }
+
+    // Close the modal
+    function closeForm() {
+      document.getElementById('bookingModal').classList.add('hidden');
+    }
+  </script>
+
+<script>
+  function toggleFAQ(index) {
+    const answer = document.getElementById(`faq-${index}`);
+    const icon = document.getElementById(`icon-${index}`);
+    const isOpen = !answer.classList.contains('hidden');
+
+    // Close all others
+    document.querySelectorAll('[id^="faq-"]').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('[id^="icon-"]').forEach(el => el.classList.remove('rotate-180'));
+
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    }
+  }
+</script>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[#5D3A00] text-white py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      
+      <!-- Brand Name -->
+      <div class="text-lg font-semibold">NavRashi</div>
+  
+      <!-- Social Icons -->
+      <!--<div class="flex space-x-4">
+        <a href="https://www.instagram.com/your_instagram" target="_blank" aria-label="Instagram">
+          <img src="static/images/insta.svg.svg" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="https://www.facebook.com/your_facebook" target="_blank" aria-label="Facebook">
+          <img src="static/images/facebook.svg.svg" alt="Facebook" class="w-6 h-6">
+        </a>
+      </div> -->
+  
+      <!-- Copyright -->
+      <div class="text-sm">&copy; 2025 NavRashi. All rights reserved.</div>
+    </div>
+  </footer>  
+
+  <!-- Floating SVGs -->
+  <!--<img src="static/images/lotus.svg.svg" class="floating-svg top-20 left-10 w-20 opacity-20" />
+  <img src="static/images/meditaion.svg.svg" class="floating-svg bottom-10 right-10 w-16" />
+  <img src="{{ url_for('static', filename='images/birdpaece.svg.svg') }}"
+     class="floating-svg top-0 right-0 w-16 opacity-20" />
+<img src="{{ url_for('static', filename='images/brainquestion.svg.svg') }}"
+     class="floating-svg bottom-20 left-1/4 w-20 opacity-15" />
+<img src="{{ url_for('static', filename='images/heartfitness.svg.svg') }}"
+     class="floating-svg top-[20%] right-[30%] w-20 opacity-14" />
+     <img src="{{ url_for('static', filename='images/yogaa1.svg.svg') }}"
+     class="floating-svg top-[60%] right-[5%] w-20 opacity-14" />
+  <img src="static/images/chakra.svg.svg" class="floating-svg top-1/2 left-1/2 w-24 transform -translate-x-1/2 -translate-y-1/2" /> -->
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+  <script>
+    tns({
+      container: '.my-slider',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      controls: false,
+      nav: true,
+      autoplayButtonOutput: false
+    });
+
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000);
+    });
+  </script>
+
+  <!-- Preloader -->
+  <div id="preloader" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <img src="static/images/loader.svg.svg" alt="Loading..." class="w-16 h-16 animate-spin-slow">
+  </div>
+
+  <script>
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 1000);
+    }
+  });
+</script>
+</body>
+</html>
+
+</body>
+</html>
+

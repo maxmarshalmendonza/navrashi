@@ -1,0 +1,36 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffef9;
+    color: #333;
+}
+
+.hero-section {
+    height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)),
+                url('https://source.unsplash.com/1600x900/?yoga,meditation') no-repeat center center/cover;
+}
+
+h1, h2, h3 {
+    color: #4b3e2c;
+}
+
+.btn-light {
+    background-color: #fff;
+    color: #4b3e2c;
+    border: none;
+}
+
+.btn-light:hover {
+    background-color: #f0e9e0;
+    color: #2d2317;
+}
+
+.navbar {
+    background-color: #fff !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #4b3e2c !important;
+}
