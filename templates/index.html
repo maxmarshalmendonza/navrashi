@@ -115,6 +115,9 @@
       <!-- Buttons -->
       <div class="space-x-3 hidden md:flex">
         <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
+          Free consultation
+        </button>
+        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
           1-on-1
         </button>
         <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
@@ -122,9 +125,6 @@
         </button>
         <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
           Meditation
-        </button>
-        <button onclick="scrollToSection('classes')" class="px-4 py-2 text-sm bg-[#FDCB9E] text-[#5D3A00] rounded-full hover:bg-[#fcb67e] transition">
-          Doubts/Queries
         </button>
       </div>
     </div>
@@ -142,11 +142,15 @@
           Welcome to NavRashi by Rashi Singh
         </h1>
         <p class="text-[#6B4C24] text-lg max-w-md">
-          Prioritize yourself and join our yoga classes.
+          Prioritize yourself and Book your Free Consultation today!
         </p>
 
         <!-- Buttons -->
 <div class="mt-6 flex flex-wrap gap-3 justify-center sm:justify-start">
+  <button onclick="scrollToSection('classes')"
+          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
+    Free consultation
+  </button>
   <button onclick="scrollToSection('classes')"
           class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
     1 on 1 Classes
@@ -158,10 +162,6 @@
   <button onclick="scrollToSection('classes')"
           class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
     Meditation Classes
-  </button>
-  <button onclick="scrollToSection('classes')"
-          class="px-4 py-2 bg-[#FF9A76] hover:bg-[#ff8157] text-white rounded shadow hover:scale-105 hover:shadow-lg transition duration-200">
-    Doubts/Queries
   </button>
 </div>
 
@@ -356,44 +356,46 @@
   <!-- SERVICES -->
   <section id="classes" class="bg-white py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold text-center text-[#5D3A00] mb-12">Explore My Classes</h2>
+      <h2 class="text-3xl font-bold text-center text-[#5D3A00] mb-12">Explore My Services</h2>
   
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <!-- Card 1: 1-on-1 Classes -->
         <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <img src="static/images/oneonone.svg.svg" alt="1-on-1 Icon" class="w-12 h-12 mb-4">
-          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">1-on-1 Classes</h3>
-          <p class="text-sm text-[#6B4C24] mb-4">Personalized sessions to help you grow at your own pace, tailored to your body and goals.</p>
-          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20book%201-on-1%20Yoga%20Classes." target="_blank" class="inline-block mt-auto bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+          <img src="static/images/brainquestion.svg.svg" alt="1-on-1 Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Free consultation</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">A free session to discuss your goals, needs, and how to support your overall well-being.</p>
+          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20book%20a%20Free%20Consultation." target="_blank" class="inline-block mt-auto bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
         </div>
   
         <!-- Card 2: Group Classes -->
         <div class="bg-[#FDF1E3] p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <img src="static/images/group.svg.svg" alt="Group Icon" class="w-12 h-12 mb-4">
+          <img src="static/images/oneonone.svg.svg" alt="Group Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">1-on-1 Classes</h3>
+          <p class="text-sm text-[#6B4C24] mb-4">Personalized sessions to help you grow at your own pace, tailored to your body and goals.</p>
+          <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20book%201-on-1%20Yoga%20Classes." target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
+        </div>
+  
+        <!-- Card 3: Meditation -->
+        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/group.svg.svg" alt="Meditation Icon" class="w-12 h-12 mb-4">
           <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Group Sessions</h3>
           <p class="text-sm text-[#6B4C24] mb-4">Uplifting community-based yoga sessions that build energy and shared focus.</p>
           <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20join%20Group%20Yoga%20Classes." target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
         </div>
   
-        <!-- Card 3: Meditation -->
-        <div class="bg-[#FFF4EC] p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <img src="static/images/meditation.svg.svg" alt="Meditation Icon" class="w-12 h-12 mb-4">
-          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Meditation</h3>
+        <!-- Card 4: Workshops / Others -->
+        <div class="bg-[#FDF1E3] p-6 rounded-2xl shadow hover:shadow-lg transition">
+          <img src="static/images/meditation.svg.svg" alt="Workshop Icon" class="w-12 h-12 mb-4">
+          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Meditaion Classes</h3>
           <p class="text-sm text-[#6B4C24] mb-4">Find stillness and clarity with deep guided meditation and breathwork.</p>
           <a href="https://wa.me/917597632099?text=Hi%2C%20I%20want%20to%20enroll%20for%20Meditation%20Sessions." target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
         </div>
-  
-        <!-- Card 4: Workshops / Others -->
-        <div class="bg-[#FDF1E3] p-6 rounded-2xl shadow hover:shadow-lg transition">
-          <img src="static/images/brainquestion.svg.svg" alt="Workshop Icon" class="w-12 h-12 mb-4">
-          <h3 class="text-xl font-semibold text-[#5D3A00] mb-2">Doubts/Queries</h3>
-          <p class="text-sm text-[#6B4C24] mb-4">Select this and talk to me directly about any doubts you have</p>
-          <a href="https://wa.me/917597632099?text=Hey!%20I%20have%20some%20questions%20about%20the%20classes" target="_blank" class="inline-block bg-[#5D3A00] text-white px-4 py-2 rounded-full text-sm">Book Now</a>
-        </div>
+      </div>
+    </section>
         
-
-  <section id="faq" class="bg-[#FFF4EC] py-20 px-6">
-    <div class="max-w-4xl mx-auto">
+        <div class="w-full">
+          <section id="faq" class="bg-[#FFF4EC] py-20 px-6">
+    <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-[#5D3A00] text-center mb-12">Frequently Asked Questions</h2>
   
       <div class="space-y-4">
@@ -415,7 +417,7 @@
             <svg id="icon-2" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
           <div id="faq-2" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
-            Yes, I offer private one-on-one sessions both online and in-person. These are great for personalized guidance or working toward specific goals.
+            Yes, I offer private one-on-one sessions. These are great for personalized guidance or working toward specific goals.
           </div>
         </div>
 
@@ -426,7 +428,7 @@
             <svg id="icon-3" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
           <div id="faq-3" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
-            Yes, all sessions are 100% online via Whatsapp Video call or Google Meet for group classes. You can practice from the comfort of your home—no commute needed!
+            Yes, all sessions are 100% online via Whatsapp Video call or Google Meet. You can practice from the comfort of your home—no commute needed!
           </div>
         </div>
 
@@ -437,7 +439,7 @@
             <svg id="icon-4" class="w-5 h-5 transition-transform duration-300 transform rotate-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#5D3A00"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
           </button>
           <div id="faq-4" class="px-6 pb-4 hidden text-[#6B4C24] text-sm">
-            Just click "Book now" on any of the classes you like and it will take you directly to my Whatsapp where we can work it further, and if you have any other doubts or anything, just click the "Other" option and talk to me directly!
+            Just click "Book now" on any of the classes you like and it will take you directly to my Whatsapp where we can work it further, if you don't know which option to choose, just click the "Free Consultation" option and we can discuss your goals & needs!
           </div>
         </div>
 
